@@ -6,7 +6,7 @@
   <% if enhanced_cart == [] %>
     <div class="alert alert-info">
       Looks like your shopping cart is empty.
-      <strong><a class="".alert-link" href="/">Continue shopping?</a></strong>
+      <strong><%= link_to "Continue Shopping?", root_path %></strong>
     </div>
   <% else %>
     <div class="panel panel-default items">
