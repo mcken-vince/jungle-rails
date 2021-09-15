@@ -8,7 +8,6 @@ class OrdersController < ApplicationController
                       line_item: LineItem.where(product_id: item[:product_id]),
                       product_info: Product.find(item[:product_id])
                       }}
-
   end
 
   def create
