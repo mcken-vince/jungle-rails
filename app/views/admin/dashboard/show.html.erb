@@ -2,11 +2,11 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th><%= link_to "Total Products:", 'admin/products#index' %></th>
+      <th><%= link_to "Total Products:", [:admin, :products] %></th>
       <td><%= @product_count %></td>
     </tr>
     <tr>
-      <th><%= link_to "Total Categories", 'admin/categories#index' %></th>
+      <th><%= link_to "Total Categories", [:admin, :categories] %></th>
       <td><%= @category_count %></td>
     </tr>
 </table>
