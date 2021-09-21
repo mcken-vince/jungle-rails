@@ -60,5 +60,22 @@ RSpec.describe User, type: :model do
       @result = User.authenticate_with_credentials(email, password)
       expect(@result).to eql(@user)
     end
+
+    it 'should authenticate successfully if there are empty spaces before or after email address' do
+      @user = User.new(first_name: 'john', last_name: 'doe', email: 'john@doe.com', password: 'secret', password_confirmation: 'secret')
+      @user.save
+      email = '   john@doe.com   '
+      password = 'secret'
+      @result = User.authenticate_with_credentials(email, password)
+      expect(@result).to eql(@user)
+    end
+    it 'should authenticate successfully if email is correct but typed in the wrong case' do
+      @user = User.new(first_name: 'john', last_name: 'doe', email: 'john@doe.com', password: 'secret', password_confirmation: 'secret')
+      @user.save
+      email = 'jOhn@DOE.coM'
+      password = 'secret'
+      @result = User.authenticate_with_credentials(email, password)
+      expect(@result).to eql(@user)
+    end
   end
 end
