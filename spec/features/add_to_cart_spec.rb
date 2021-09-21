@@ -20,8 +20,6 @@ RSpec.feature "Visitor clicks on 'add to cart'", type: :feature, js: true do
     # ACT
     visit root_path
     first('.product').click_on('Add')
-    # DEBUG
-    save_screenshot
 
     # VERIFY
     expect(page).to have_content 'My Cart (1)'
