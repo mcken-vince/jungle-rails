@@ -21,8 +21,6 @@ RSpec.feature "Visitor clicks on a product from the home page", type: :feature, 
     # ACT
     visit root_path
     first('.product').click_on('Details')
-    # DEBUG
-    save_screenshot
 
     # VERIFY
     expect(page).to have_css 'article.product-detail'
