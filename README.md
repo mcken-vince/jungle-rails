@@ -32,3 +32,14 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
 * PostgreSQL 9.x
 * Stripe
+
+## Testing
+Run the following lines in the terminal in the main project directory:
+* RSpec unit tests:
+```
+bin/rspec
+```
+* Feature tests with Capybara/Poltergeist/RSpec tests
+```
+bin/rspec spec/features
+```
