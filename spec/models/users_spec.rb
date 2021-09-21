@@ -39,9 +39,26 @@ RSpec.describe User, type: :model do
       it 'should save if password is 5 characters or more' do
         @user = User.new(first_name: 'john', last_name: 'doe', email: 'john@doe.com', password: 'bigger', password_confirmation: 'bigger')
         @user.save!
-        
       end
     end
+  end
 
+  describe '.authenticate_with_credentials' do
+    it "should return nil if user doesn't exist" do
+      @user = User.new(first_name: 'john', last_name: 'doe', email: 'john@doe.com', password: 'secret', password_confirmation: 'secret')
+      @user.save
+      email = 'billy@bean.com'
+      password = 'whatwhat'
+      @result = User.authenticate_with_credentials(email, password)
+      expect(@result).to be_nil
+    end
+    it "should return user instance if user does exist" do
+      @user = User.new(first_name: 'john', last_name: 'doe', email: 'john@doe.com', password: 'secret', password_confirmation: 'secret')
+      @user.save
+      email = 'john@doe.com'
+      password = 'secret'
+      @result = User.authenticate_with_credentials(email, password)
+      expect(@result).to eql(@user)
+    end
   end
 end
