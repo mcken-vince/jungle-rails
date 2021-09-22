@@ -2,9 +2,13 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Home Page:
 !["Home Page View"](https://github.com/mcken-vince/jungle-rails/blob/master/screenshots/home-page-screenshot.png)
+## Product Details:
 !["Product Details View"](https://github.com/mcken-vince/jungle-rails/blob/master/screenshots/product-details-screenshot.png)
+## My Cart:
 !["My Cart View"](https://github.com/mcken-vince/jungle-rails/blob/master/screenshots/my-cart-screenshot.png)
+## SignUp Form
 !["SignUp Page View"](https://github.com/mcken-vince/jungle-rails/blob/master/screenshots/signup-page-screenshot.png)
 
 ## Additional Steps for Apple M1 Machines
