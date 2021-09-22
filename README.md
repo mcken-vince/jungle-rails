@@ -53,6 +53,5 @@ bin/rspec
 ```
 bin/rspec spec/features
 ### Important: Must use node v6.11.0 to run this line
-### Compatibility issues with PhantomJS
 ```
 
