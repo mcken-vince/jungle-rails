@@ -40,7 +40,8 @@ Run the following lines in the terminal in the main project directory:
 bin/rspec
 ```
 * Feature tests with Capybara/Poltergeist/RSpec tests
-### Important: Must use node v6.11.0 to run feature tests
 ```
 bin/rspec spec/features
+### Important: Must use node v6.11.0 to run this line
 ```
+
